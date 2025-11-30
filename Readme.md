@@ -1,5 +1,7 @@
 # ZigMKay Keyboard Sample
-ZigMkay is a keyboard firmware made with zig. 
+ZigMkay is a keyboard firmware made with zig.
+This is a sample repo showing how to cofigure a custom board and keymap.
+It is relying on the [ZigMkay library](https://github.com/StephanMoeller/zigmkay).
 
 # Getting started
 ZigMKay can run on all keyboards that have an mcu supported by the microzig library.
@@ -24,6 +26,11 @@ If you don't encounter any build errors, nothing will be outputted in the termin
 Now you can find a .uf2 file in zig-out/firmware/zigmkay.uf2
 
 Now flash this file to your keyboard.
+
+# Updating ZigMkay dependency
+```bash
+zig fetch --save git+https://github.com/StephanMoeller/zigmkay.git
+```
 
 # Editing your keymap
 Typically you will only need to edit the keymap.zig file. This will contain your keymap with combos and custom code, and your pin mappings which you only need to alter if the board you use is different from what the copied keyboard was made for.
