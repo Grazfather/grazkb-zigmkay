@@ -97,35 +97,35 @@ const tapping_term = core.TimeSpan{ .ms = 250 };
 const combo_timeout = core.TimeSpan{ .ms = 40 };
 
 pub const combos = [_]core.Combo2Def{
-    Combo_Tap(.{ 1, 2 }, L_BASE, us.J),
-    Combo_Tap_HoldMod(.{ 11, 12 }, L_BASE, us.Z, .{ .right_ctrl = true, .right_alt = true }),
-
-    Combo_Tap_HoldMod(.{ 12, 13 }, L_BASE, us.V, .{ .left_ctrl = true, .left_shift = true }),
-    Combo_Tap_HoldMod(.{ 12, 13 }, L_NUM, _Ctl(us.V), .{ .left_ctrl = true, .left_shift = true }),
-    Combo_Tap_HoldMod(.{ 11, 12 }, L_NUM, _Ctl(us.X), .{ .left_ctrl = true, .left_shift = true }),
-    Combo_Tap_HoldMod(.{ 12, 13 }, L_ARROWS, us.AMPR, .{ .left_ctrl = true, .left_shift = true }),
-
-    Combo_Tap(.{ 13, 16 }, L_BOTH, core.KeyCodeFire{ .tap_keycode = us.KC_F4, .tap_modifiers = .{ .left_alt = true } }),
-
-    Combo_Tap(.{ 23, 24 }, L_BASE, us.BOOT),
-    Combo_Tap(.{ 0, 4 }, L_BASE, us.BOOT),
-    Combo_Tap(.{ 5, 9 }, L_BASE, us.BOOT),
-
-    Combo_Tap(.{ 7, 8 }, L_ARROWS, us.QUES),
-    Combo_Tap(.{ 7, 8 }, L_BOTH, us.QUES),
-
-    Combo_Tap(.{ 1, 2 }, L_ARROWS, us.EXLM),
-    Combo_Tap(.{ 1, 2 }, L_BOTH, us.EXLM),
-
-    Combo_Tap_HoldMod(.{ 17, 18 }, L_BASE, us.MINS, .{ .left_ctrl = true, .left_alt = true }),
-    Combo_Tap(.{ 17, 18 }, L_ARROWS, us.PLUS),
-    Combo_Tap(.{ 16, 17 }, L_ARROWS, us.PIPE),
-
-    Combo_Tap(.{ 20, 21 }, L_ARROWS, us.BSLS),
-
-    Combo_Custom(.{ 0, 9 }, L_BASE, ENABLE_GAMING),
-    Combo_Custom(.{ 0, 9 }, L_GAMING, DISABLE_GAMING),
-    Combo_Custom(.{ 1, 3 }, L_ARROWS, EQ_COL),
+    // Combo_Tap(.{ 1, 2 }, L_BASE, us.J),
+    // Combo_Tap_HoldMod(.{ 11, 12 }, L_BASE, us.Z, .{ .right_ctrl = true, .right_alt = true }),
+    //
+    // Combo_Tap_HoldMod(.{ 12, 13 }, L_BASE, us.V, .{ .left_ctrl = true, .left_shift = true }),
+    // Combo_Tap_HoldMod(.{ 12, 13 }, L_NUM, _Ctl(us.V), .{ .left_ctrl = true, .left_shift = true }),
+    // Combo_Tap_HoldMod(.{ 11, 12 }, L_NUM, _Ctl(us.X), .{ .left_ctrl = true, .left_shift = true }),
+    // Combo_Tap_HoldMod(.{ 12, 13 }, L_ARROWS, us.AMPR, .{ .left_ctrl = true, .left_shift = true }),
+    //
+    // Combo_Tap(.{ 13, 16 }, L_BOTH, core.KeyCodeFire{ .tap_keycode = us.KC_F4, .tap_modifiers = .{ .left_alt = true } }),
+    //
+    // Combo_Tap(.{ 23, 24 }, L_BASE, us.BOOT),
+    // Combo_Tap(.{ 0, 4 }, L_BASE, us.BOOT),
+    // Combo_Tap(.{ 5, 9 }, L_BASE, us.BOOT),
+    //
+    // Combo_Tap(.{ 7, 8 }, L_ARROWS, us.QUES),
+    // Combo_Tap(.{ 7, 8 }, L_BOTH, us.QUES),
+    //
+    // Combo_Tap(.{ 1, 2 }, L_ARROWS, us.EXLM),
+    // Combo_Tap(.{ 1, 2 }, L_BOTH, us.EXLM),
+    //
+    // Combo_Tap_HoldMod(.{ 17, 18 }, L_BASE, us.MINS, .{ .left_ctrl = true, .left_alt = true }),
+    // Combo_Tap(.{ 17, 18 }, L_ARROWS, us.PLUS),
+    // Combo_Tap(.{ 16, 17 }, L_ARROWS, us.PIPE),
+    //
+    // Combo_Tap(.{ 20, 21 }, L_ARROWS, us.BSLS),
+    //
+    // Combo_Custom(.{ 0, 9 }, L_BASE, ENABLE_GAMING),
+    // Combo_Custom(.{ 0, 9 }, L_GAMING, DISABLE_GAMING),
+    // Combo_Custom(.{ 1, 3 }, L_ARROWS, EQ_COL),
 };
 
 // For now, all these shortcuts are placed in the custom keymap to let the user know how they are defined

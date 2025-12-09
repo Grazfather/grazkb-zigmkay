@@ -53,8 +53,11 @@ pub const scanner_settings = zigmkay.matrix_scanning.ScannerSettings{
 };
 
 // zig fmt: on
-pub const cols = [_]rp2xxx.gpio.Pin{ p.col1, p.col2, p.col3, p.col4, p.col5, p.col6 };
-pub const rows = [_]rp2xxx.gpio.Pin{ p.row1, p.row2, p.row3, p.row4, p.row5, p.row6, p.row7, p.row8, p.row9, p.row10 };
+// I had to swap these, otherwise when it used the high index e.g. 9 at the
+// bottom right of the above it got oob, implying that you guys do <col, row>
+// instead of <row, col>
+pub const rows = [_]rp2xxx.gpio.Pin{ p.col1, p.col2, p.col3, p.col4, p.col5, p.col6 };
+pub const cols = [_]rp2xxx.gpio.Pin{ p.row1, p.row2, p.row3, p.row4, p.row5, p.row6, p.row7, p.row8, p.row9, p.row10 };
 
 const primary = true;
 
